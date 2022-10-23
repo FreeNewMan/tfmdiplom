@@ -15,7 +15,7 @@ module "master-node" {
   boot_disk     = "network-ssd"
   disk_size     = "20"
   nat           = "true"
-  memory        = "8"
+  memory        = "4"
   core_fraction = "100"
 }
 
