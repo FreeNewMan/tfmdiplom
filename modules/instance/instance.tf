@@ -56,9 +56,10 @@ resource "yandex_compute_instance" "instance" {
     ip_address  = var.ip_addr
   }
 
+
   metadata = {
+    #ssh-keys = "${var.users}:${file("~/.ssh/id_rsa.pub")}"
     user-data = "${file("./users/metadata.txt")}"
-    ssh-keys = "${var.users}:${file("~/.ssh/id_rsa.pub")}"
   }
 }
 
