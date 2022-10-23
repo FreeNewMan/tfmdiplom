@@ -6,12 +6,12 @@ module "master-node" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd87k1od4v1bth3m59ha"  # ubuntu 16
+  image_id      = "fd8kb72eo1r5fs97a1ki"  # Ubuntu 22.04 LTS
   platform_id   = "standard-v2"
   name          = "master-node"
   description   = "master-node"
   users         = "devuser"
-  cores         = "2"
+  cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "20"
   nat           = "true"
@@ -29,16 +29,16 @@ module "worker-node1" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd87k1od4v1bth3m59ha"  # ubuntu 16
+  image_id      = "fd8kb72eo1r5fs97a1ki"  # Ubuntu 22.04 LTS
   platform_id   = "standard-v2"
   name          = "worker-node1"
   description   = "worker-node1"
   users         = "devuser"
-  cores         = "2"
+  cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "40"
   nat           = "true"
-  memory        = "8"
+  memory        = "4"
   core_fraction = "100"
 }
 
