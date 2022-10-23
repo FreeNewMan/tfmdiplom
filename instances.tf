@@ -6,7 +6,7 @@ module "master-node" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd88d14a6790do254kj7"  # centos
+  image_id      = "fd8kdq6d0p8sij7h5qe3"  # Ubuntu 20.04 LTS
   platform_id   = "standard-v2"
   name          = "master-node"
   description   = "master-node"
@@ -29,7 +29,7 @@ module "worker-node1" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd88d14a6790do254kj7"  # centos
+  image_id      = "fd8kdq6d0p8sij7h5qe3"  # Ubuntu 20.04 LTS
   platform_id   = "standard-v2"
   name          = "worker-node1"
   description   = "worker-node1"
@@ -50,7 +50,7 @@ module "worker-node2" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-b.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-b.zone}"  
-  image_id      = "fd88d14a6790do254kj7"  # centos
+  image_id      = "fd8kdq6d0p8sij7h5qe3"  # Ubuntu 20.04 LTS
   platform_id   = "standard-v2"
   name          = "worker-node2"
   description   = "worker-node2"
