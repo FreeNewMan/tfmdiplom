@@ -14,7 +14,7 @@ module "master-node" {
   cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "20"
-  #nat           = "true"
+  nat           = "true"
   memory        = "4"
   core_fraction = "100"
 }
@@ -37,7 +37,7 @@ module "worker-node1" {
   cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "40"
-  #nat           = "true"
+  nat           = "true"
   memory        = "4"
   core_fraction = "100"
 }
@@ -58,7 +58,7 @@ module "worker-node2" {
   cores         = "2"
   boot_disk     = "network-ssd"
   disk_size     = "40"
-  #nat           = "true"
+  nat           = "true"
   memory        = "4"
   core_fraction = "100"
 }
