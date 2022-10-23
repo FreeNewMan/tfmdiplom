@@ -1,6 +1,6 @@
 variable "YC_TOKEN" {
   type        = string
-   #default = "${YC_TOKEN}"
+
  }
  
 variable "yc_cloud_id" {
@@ -12,10 +12,5 @@ variable "yc_folder_id" {
 variable "yc_region" {
   default = "ru-central1-a"
 }
-
-variable "YC_S3_ACCESS_KEY" {
-  type        = string
-   #default = "${YC_TOKEN}"
- }
 
 
