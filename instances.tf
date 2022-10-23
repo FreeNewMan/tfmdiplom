@@ -6,7 +6,7 @@ module "master-node" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd8kb72eo1r5fs97a1ki"  # Ubuntu 22.04 LTS
+  image_id      = "fd88d14a6790do254kj7"  # centos
   platform_id   = "standard-v2"
   name          = "master-node"
   description   = "master-node"
@@ -14,7 +14,7 @@ module "master-node" {
   cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "20"
-  nat           = "true"
+  #nat           = "true"
   memory        = "4"
   core_fraction = "100"
 }
@@ -29,7 +29,7 @@ module "worker-node1" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-a.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-a.zone}"
-  image_id      = "fd8kb72eo1r5fs97a1ki"  # Ubuntu 22.04 LTS
+  image_id      = "fd88d14a6790do254kj7"  # centos
   platform_id   = "standard-v2"
   name          = "worker-node1"
   description   = "worker-node1"
@@ -37,7 +37,7 @@ module "worker-node1" {
   cores         = "4"
   boot_disk     = "network-ssd"
   disk_size     = "40"
-  nat           = "true"
+  #nat           = "true"
   memory        = "4"
   core_fraction = "100"
 }
@@ -50,7 +50,7 @@ module "worker-node2" {
 
   subnet_id     = "${yandex_vpc_subnet.diplom-subnet-b.id}"
   zone          = "${yandex_vpc_subnet.diplom-subnet-b.zone}"  
-  image_id      = "fd87k1od4v1bth3m59ha"  # ubuntu 16
+  image_id      = "fd88d14a6790do254kj7"  # centos
   platform_id   = "standard-v2"
   name          = "worker-node2"
   description   = "worker-node2"
@@ -58,8 +58,8 @@ module "worker-node2" {
   cores         = "2"
   boot_disk     = "network-ssd"
   disk_size     = "40"
-  nat           = "true"
-  memory        = "8"
+  #nat           = "true"
+  memory        = "4"
   core_fraction = "100"
 }
 
